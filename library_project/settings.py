@@ -72,7 +72,7 @@ WSGI_APPLICATION = "library_project.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "djongo",
-        "NAME": "library_db",                # same DB you see in Compass
+        "NAME": "library_db",                
         "CLIENT": {
             "host": "mongodb://localhost:27017",
         },
