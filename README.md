@@ -58,17 +58,18 @@ Two options:
 
 To run the SmartLib system exactly as it was developed, follow these steps:
 
-1. Install Anaconda & Create the Virtual Environment
-Step A — Open Anaconda Prompt
-Step B — Create the environment (only once): 
+1️⃣ Install Anaconda & Create the Virtual Environment
 
-`conda create -n library_env python=3.10`
+Step A — Open Anaconda Prompt
+
+Step B — Create the environment (only once):
+
+`conda create -n library_env python=3.10 -y`
 
 Step C — Activate the environment:
+conda activate library_env
 
-`conda activate library_env`
-
-2. Install Required Python Packages
+2️⃣ Install Required Python Packages
 
 Inside your project folder, run:
 
@@ -81,68 +82,65 @@ Inside your project folder, run:
 `pip install dnspython`
 
 
-
 These are the exact packages used during development.
 
- 3. Set Up MongoDB
+3️⃣ Set Up MongoDB
 
 Install MongoDB Community Server
 
-Start the MongoDB service
+Download from: https://www.mongodb.com/try/download/community
 
-On Windows, it usually starts automatically
+Start MongoDB service
 
-No extra configuration needed
+On Windows, it usually starts automatically.
 
-Your settings.py already includes:
+No configuration needed
 
-`DATABASES = {
+Your `settings.py` already contains:
+
+```bash
+DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'library_db',
     }
-}`
+}
+```
+---
 
+SmartLib will automatically create collections when the system runs.
 
+4️⃣ Run the Development Server
 
- 6. Run the Development Server
-
-Start the server:
-
-1-Activate the environment:
+Step 1 — Activate the environment
 
 `conda activate library_env`
 
-2-Navigate to the project folder:
+Step 2 — Navigate to the project folder
 
-`cd path/to/your/project`
+Example:
 
-for example:
+cd "C:\Users\abrar\OneDrive\Desktop\it7405-project-an"
 
-`cd "C:\Users\abrar\OneDrive\Desktop\it7405-project-an"`
-
-3-Run the server:
+Step 3 — Run the server
 
 `python manage.py runserver`
 
-
 The system will now be available at:
 
-✔Main Website:
+✔ Main Website:
 
 http://127.0.0.1:8000/
 
-✔Admin panel:
+✔ Admin Panel:
 
 http://127.0.0.1:8000/admin/
 
-If you want to log in to /admin/:
+To create a Django Admin login:
 
 `python manage.py createsuperuser`
 
+🎉 Your SmartLib Setup Is Complete!
 
-Your SmartLib setup is complete.
-You can now browse the system, add and manage records, and view all stored data through MongoDB or Django Admin.
-Everything should work smoothly if the steps were followed. Enjoy using the application!
 
 
