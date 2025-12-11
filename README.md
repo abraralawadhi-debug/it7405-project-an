@@ -141,4 +141,8 @@ If you want to log in to /admin/:
 `python manage.py createsuperuser`
 
 
+Your SmartLib setup is complete.
+You can now browse the system, add and manage records, and view all stored data through MongoDB or Django Admin.
+Everything should work smoothly if the steps were followed. Enjoy using the application!
+
 
