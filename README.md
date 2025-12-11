@@ -71,6 +71,8 @@ conda activate library_env
 
 2️⃣ Install Required Python Packages
 
+`pip install -r requirements.txt`
+
 Inside your project folder, run:
 
 `pip install django`
