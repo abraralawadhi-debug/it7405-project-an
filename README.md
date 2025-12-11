@@ -17,10 +17,11 @@ This README explains how to **run the system in the same way it was developed**,
 
 ## ✅ Requirements
 
-To run this project, you need:
+To run this SmartLib, you need:
 
 - **Anaconda** (or Python 3.10+)
 - **MongoDB** (local installation)
+- **MongoDB Compass** (optional, for visual database access)
 - **Git** (optional, for cloning the repository)
 
 The project was developed using:
@@ -98,41 +99,46 @@ Your settings.py already includes:
 `DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'smartlib',
+        'NAME': 'library_db',
     }
 }`
 
- 4. Apply Django Migrations
 
-Although the project uses MongoDB, Django still requires migrations.
-
-Run:
-
-`python manage.py makemigrations`
-
-`python manage.py migrate`
-
-
- 5. Create a Superuser (optional but recommended)
-`python manage.py createsuperuser`
-
-
-This will create login access for the Django Admin Panel.
 
  6. Run the Development Server
 
 Start the server:
+
+1-Activate the environment:
+
+`conda activate library_env`
+
+2-Navigate to the project folder:
+
+`cd path/to/your/project`
+
+for example:
+
+`cd "C:\Users\abrar\OneDrive\Desktop\it7405-project-an"`
+
+3-Run the server:
 
 `python manage.py runserver`
 
 
 The system will now be available at:
 
+✔Main Website:
+
 http://127.0.0.1:8000/
 
-Admin panel:
+✔Admin panel:
 
 http://127.0.0.1:8000/admin/
+
+If you want to log in to /admin/:
+
+`python manage.py createsuperuser`
 
 
 
